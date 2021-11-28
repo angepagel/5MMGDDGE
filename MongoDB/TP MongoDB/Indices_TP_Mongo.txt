@@ -1,0 +1,156 @@
+Indices sur les résultats attendus dans le TP MongoDB
+=====================
+
+Pour le comptage:
+  * ajouter {$count: "count:"} en dernière opération du pipeline d'un aggregate,
+  * sans utilisation d'aggregate, ajouter .count() à la fin de la requête.
+
+----------
+Question 1 output size: 25356
+
+----------
+Question 2 - output size: 1070
+
+----------
+Question 3 - output size: 2
+
+----------
+Question 4 - output size: 381
+
+----------
+Question 5 - output size: 1154
+
+----------
+Question 6 - output size: 1 (si l'on ne compte pas seulement les scores supérieurs ou égaux à 50, on trouvera 39)
+
+----------
+Question 7 - output size: 3574 (attention, ici on s'intéresse au pseudo-attribut "grade" et non au pseudo-attribut "category")
+
+----------
+Question 8 - Vérification : db.restaurants.find({"name" : "Juni"})
+
+-----------
+Question 9 - Vérification : db.restaurants.find({"restaurant_id" : "41156888"})
+
+-----------
+Question 10 - Vérification : db.restaurants.find({"address.zipcode" : "10016"}, {"name" : 1, "cuisine" : 1})
+
+-----------
+Question 11 - Vérification : db.restaurants.find({"restaurant_id" : "41154403"})
+
+-----------
+Question 12 - output size: 88
+
+-----------
+Question 13 - output size: 137
+
+-----------
+Question 14 -
+Résultat moyenne des prix moyens: { "_id" : "", "moyenne" : 25 }
+Résultat moyenne par code postal:
+    { "_id" : "10022", "moyenne" : 20 }
+    { "_id" : "10013", "moyenne" : 35 }
+    { "_id" : "10036", "moyenne" : 10 }
+    { "_id" : "10019", "moyenne" : 30 }
+    { "_id" : "10038", "moyenne" : 20 }
+
+-----------
+Question 15 - collection comments créé
+
+-----------
+Question 16 - output contenant "nInserted" : 3
+
+Documents utilisés pour cette requête: (cela influence les résultats aux questions suivantes)
+   {
+  	 "restaurant_id" : "50003263",
+	 "client_id" : "56434124",
+	 "comment" : "Surprizingly good cuisine. The location was leaving doubts",
+	 "date" : ISODate("2020-04-15T04:37:00.000Z"),
+	 "type" : "positve"
+   },
+   {
+  	 "restaurant_id" : "50008109",
+	 "client_id" : "794212638",
+	 "comment" : "Very bad cuisine. To avoid !",
+	 "date" : ISODate("2019-12-31T00:00:00.000Z"),
+	 "type" : "negative"
+   },
+   {
+  	 "restaurant_id" : "50015658",
+	 "client_id" : "32189446",
+	 "comment" : "Classical cuisine, but good",
+	 "date" : ISODate("2020-06-12T14:21:59.999Z"),
+	 "type" : "positive"
+   }
+   
+-----------
+Question 17 - output size: 3
+
+-----------
+Question 18 - output contenant "nInserted" : 7
+
+Documents utilisés pour cette requête: (cela influence les résultats aux questions suivantes)
+  {
+  	 "restaurant_id" : "50003263",
+	 "client_id" : "56434124",
+	 "comment" : "Gosh, looks bad but taste better",
+	 "date" : ISODate("2018-04-15T04:37:00.000Z"),
+	 "type" : "positve"
+   },
+   {
+  	 "restaurant_id" : "50008109",
+	 "client_id" : "32189446",
+	 "comment" : "I ended sick...",
+	 "date" : ISODate("2019-12-31T00:00:00.000Z"),
+	 "type" : "negative"
+   },
+   {
+  	 "restaurant_id" : "40386062",
+	 "client_id" : "32189446",
+	 "comment" : "Not bad at all",
+	 "date" : ISODate("2020-01-12T14:21:59.999Z"),
+	 "type" : "positive"
+  },
+  {
+  	 "restaurant_id" : "40386062",
+	 "client_id" : "56434124",
+	 "comment" : "Berk !",
+	 "date" : ISODate("2029-04-10T04:37:00.000Z"),
+	 "type" : "negative"
+   },
+   {
+  	 "restaurant_id" : "50008109",
+	 "client_id" : "79423638",
+	 "comment" : "Bof... I've seen better food",
+	 "date" : ISODate("2011-12-31T00:00:00.000Z"),
+	 "type" : "negative"
+   },
+   {
+  	 "restaurant_id" : "50015658",
+	 "client_id" : "32368446",
+	 "comment" : "Very good !",
+	 "date" : ISODate("2018-03-12T14:21:59.999Z"),
+	 "type" : "positive"
+  },
+  {
+	 "restaurant_id" : "50015658",
+	 "client_id" : "32167246",
+	 "comment" : "Un régal !",
+	 "date" : ISODate("2020-03-18T14:21:59.999Z"),
+	 "type" : "positive"
+  }
+  
+-----------
+Question 19 - output size: suivant la requête utilisée, on aura 4 documents correspondants aux restaurant, ou 10 documents correspondants aux commentaires
+
+-----------
+Question 20 - output contenant "ok" : 1
+
+-----------
+Question 21 - output contenant "ok" : 1
+
+-----------
+Question 22 - liste contenant chaque index
+
+-----------
+Question 23, 24, 25 - query plan de chaque requête, l'intérêt est de voir l'évolution avec et sans index
