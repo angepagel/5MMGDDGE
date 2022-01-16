@@ -1,0 +1,22 @@
+       quartier       | ecoles
+----------------------+--------
+ BERRIAT ST BRUNO     |     13
+ EXPOSITION-BAJATIERE |     12
+ ABBAYE-JOUHAUX       |      6
+ CENTRE VILLLE        |      6
+ RONDEAU-LIBERATION   |      6
+ ALPINS-ALLIERS       |      5
+ EAUX CLAIRES         |      5
+ MALHERBE             |      5
+ CAPUCHE GR           |      4
+ NOTRE DAME           |      4
+ VILLENEUVE2          |      3
+ MUTUALITE            |      3
+ VILLENEUVE1          |      3
+ VILLAGE-OLYMPIQUE    |      3
+ JEAN MACE            |      3
+ ILE VERTE            |      1
+ TEISSEIRE            |      1
+ CHAMPIONNET          |      1
+ SAINT-LAURENT        |      1
+(19 rows)
